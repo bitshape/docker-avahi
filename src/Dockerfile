@@ -1,6 +1,7 @@
-FROM alpine
+MAINTAINER ingenieurmt <matthew@thompsons.id.au>
 
-RUN apk add --no-cache avahi augeas
+FROM alpine
+RUN apk add --update --no-cache avahi augeas
 
 ADD entrypoint.sh /opt/entrypoint.sh
 
