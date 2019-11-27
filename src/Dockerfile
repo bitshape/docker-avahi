@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:latest
 RUN apk add --update --no-cache avahi augeas
 
 ADD entrypoint.sh /opt/entrypoint.sh
