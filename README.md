@@ -7,7 +7,7 @@ Docker image for the Avahi mDNS/DNS-SD daemon. Built on Alpine Linux to make the
 Basic usage consists of running the docker container with the appropriate environment variables and volumes to achieve your desired behaviour.
 
 ```shell
-docker run flungo/avahi
+docker run ingenieurmt/avahi
 ```
 
 ## Environment variables
