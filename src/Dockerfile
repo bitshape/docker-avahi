@@ -1,9 +1,10 @@
-FROM alpine:latest
+FROM alpine:3.11
 RUN apk add --update --no-cache avahi augeas
 
-COPY entrypoint.sh /opt/
-RUN chmod +x /opt/entrypoint.sh
+RUN mkdir /opt/avahi
+COPY entrypoint.sh /opt/avahi/
+RUN chmod +x /opt/avahi/entrypoint.sh
 
-ENTRYPOINT ["/opt/entrypoint.sh"]
+ENTRYPOINT ["/opt/avahi/entrypoint.sh"]
 
 MAINTAINER ingenieurmt <matthew@thompsons.id.au>
