@@ -4,6 +4,10 @@ if [ "${DEBUG}" == "true" ]; then
   set -x
 fi
 
+# Delete avahi-daemon pid file if it exists
+if [ -f "/var/run/avahi-daemon/pid" ]; then
+  rm /var/run/avahi-daemon/pid
+fi
 
 AUG_BASE="/files/etc/avahi/avahi-daemon.conf"
 
