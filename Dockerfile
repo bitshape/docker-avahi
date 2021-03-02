@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.13
 RUN apk --no-cache upgrade \
     && apk add --update --no-cache avahi augeas
 
