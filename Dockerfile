@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM alpine:3.14
 RUN apk --no-cache upgrade \
     && apk add --update --no-cache avahi augeas
 
@@ -8,4 +8,4 @@ RUN chmod +x /opt/avahi/entrypoint.sh
 
 ENTRYPOINT ["/opt/avahi/entrypoint.sh"]
 
-LABEL maintainer="matthew@thompsons.id.au"
+LABEL maintainer="matthew@kobayashi.com.au"
